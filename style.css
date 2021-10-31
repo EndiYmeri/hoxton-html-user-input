@@ -1,0 +1,130 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #f9f2fe;
+    display: grid;
+    place-items: center;
+    height: 100vh;
+    font-family: sans-serif;
+}
+
+form {
+    display: grid;
+    background-color: white;
+    padding: 50px;
+    box-shadow: 0 0 20px 5px #9575e0;
+    border-radius: 20px;
+    animation: formShadow 5s infinite alternate ease-in-out;
+    width: 90%;
+    max-width: 500px;
+}
+
+h1 {
+    text-align: center;
+    font-size: 3.5rem;
+    font-weight: 600;
+    margin-bottom: 20px;
+    background: rgb(121, 140, 230);
+    background: linear-gradient(90deg, rgba(121, 140, 230, 1) 0%, rgba(181, 93, 216, 1) 100%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    -moz-text-fill-color: transparent;
+    -webkit-text-fill-color: transparent
+}
+
+label {
+    margin: 10px 0;
+    display: grid;
+    gap: 10px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: #545454;
+}
+
+.checkbox-label {
+    display: block;
+}
+
+input,
+select,
+textarea {
+    outline: none;
+    padding: 15px 10px;
+    font-size: 1.2rem;
+    border: none;
+    border-bottom: 1px solid #9575e050;
+    position: relative;
+    transition: 0.3s ease-in-out;
+}
+
+input:focus,
+textarea:focus {
+    border-bottom: 1px solid #9575e090;
+}
+
+select {
+    font-weight: 700;
+    cursor: pointer;
+}
+
+select option {
+    background-color: #f9f2fe;
+}
+
+textarea {
+    font-family: inherit;
+}
+
+input:-internal-autofill-selected {
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+}
+
+.submit-button {
+    margin: 20px 0;
+    background: linear-gradient(90deg, rgba(181, 93, 216, 1) 0%, rgba(121, 140, 230, 1) 100%);
+    color: white;
+    border: none;
+    border-radius: 30px;
+    outline: none;
+    padding: 10px;
+    font-size: 1.2rem;
+    display: grid;
+    grid-auto-flow: column;
+    gap: 10px;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.submit-button svg {
+    width: 0px;
+    height: 100%;
+    transition: .3s ease-in-out;
+}
+
+.submit-button:hover svg {
+    width: 20px;
+}
+
+@keyframes formShadow {
+    0% {
+        box-shadow: 0 0 20px 5px #9575e0;
+    }
+    50% {
+        box-shadow: 0 0 25px 6px #9575e0;
+    }
+    100% {
+        box-shadow: 0 0 20px 5px #9575e0;
+    }
+}
+
+@media screen and (max-width:600px) {
+    form {
+        padding: 20px 15px;
+    }
+}
